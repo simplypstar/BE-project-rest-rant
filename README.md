@@ -22,8 +22,9 @@ BE-REST-Rant is an app where users can review restaurants.
 
 # Places Table
 
-   **City**       |     **State**     |     **Cuisines**     |     **Pics** 
-------------------|-------------------|----------------------|------------------
-                  |                   |                      |                  
-                  |                   |                      |                  
+ **City** | **State** | **Cuisines** | **Pics** 
+----------|-----------|--------------|----------
+          |           |              |          
+          |           |              |          
+
 
