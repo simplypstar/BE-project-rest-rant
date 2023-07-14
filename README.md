@@ -20,18 +20,9 @@ BE-REST-Rant is an app where users can review restaurants.
 
 
 
-
-The places should have a name (string), city (string), state (string), cuisines (string) and a pic (string)
 # Places Table
 
- **City**   | **State**                 | **Cuisines**                       | **Pics**                   
-------------|---------------------------|------------------------------------------------------
-            |                           |                                    |                 
-            |                           |                                    |                  
-
-
-
- **\*\*City\*\*** | **\*\*State\*\*** | **\*\*Cuisines\*\*** | **\*\*Pics\*\*** 
+   **City**       |     **State**     |     **Cuisines**     |     **Pics** 
 ------------------|-------------------|----------------------|------------------
                   |                   |                      |                  
                   |                   |                      |                  
