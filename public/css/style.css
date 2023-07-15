@@ -6,3 +6,10 @@ h1 {
   h2 {
     color: blue;
   }
+
+p {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  color: red;
+}
