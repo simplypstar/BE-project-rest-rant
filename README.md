@@ -30,6 +30,16 @@ BE-REST-Rant is an app where users can review restaurants.
  Roanoke     | VA        | American     |          
  Roanoke     | VA        | Chinese      |          
              |           |              |          
-             |           |              |          
-             |           |              |          
+
+
+
+# Places array
+
+ **Field Name** | **Data Type** 
+----------------|----------------
+ name           | string         
+ city           | string         
+ state          | string         
+ cuisines       | string         
+ pic            | string (a URL) 
 
