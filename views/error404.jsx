@@ -6,7 +6,13 @@ function error404 () {
         <Def>
             <main>
                 <h1>404: PAGE NOT FOUND</h1>
-                <p>Oops, sorry, we can't find this page!</p>
+                <center><p>Oops, sorry, we can't find this page!</p></center>
+                <div>
+                    <center><img src="/images/peacock-unsplash.jpeg" alt="Peacock" width="600" height="650"/></center>
+                    <div>
+                        <center>Photo by <a href="AUTHOR_LINK">Julius Jansson</a> on <a href="UNSPLASH_LINK">Unsplash</a></center>
+                    </div>
+                </div>
             </main>
         </Def>
     )
