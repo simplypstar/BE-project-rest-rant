@@ -2,8 +2,7 @@
 
 BE-REST-Rant is an app where users can review restaurants.
 
-# Routes
-
+# Routes Table
  **Method** | **Path**                  | **Purpose**                                          
 ------------|---------------------------|------------------------------------------------------
  GET        | /                         | Home page                                            
@@ -21,20 +20,17 @@ BE-REST-Rant is an app where users can review restaurants.
 
 
 # Places Table
-
  **City**    | **State** | **Cuisines** | **Pics** 
 -------------|-----------|--------------|----------
  Raleigh     | NC        | American     |          
  Charlotte   | NC        | Chinese      |          
  Rocky Mount | NC        | Japanese     |          
  Roanoke     | VA        | American     |          
- Roanoke     | VA        | Chinese      |          
-             |           |              |          
+ Roanoke     | VA        | Chinese      |            
 
 
 
-# Places array
-
+# Places array format
  **Field Name** | **Data Type** 
 ----------------|----------------
  name           | string         
