@@ -9,32 +9,32 @@ function new_form () {
             <form method="POST" action="/places">
               <div>
                 <label htmlFor="name">Place Name </label>
-                <input id="name" name="name"
+                <input className="form-control" id="name" name="name"
                   type="text"
                   required />
               </div>
               <div>
                 <label htmlFor="pic">Place Picture </label>
-                <input id="pic" name="pic" />
+                <input className="form-control" id="pic" name="pic" />
               </div>
               <div>
                 <label htmlFor="city">City </label>
-                <input id="city" name="city"
+                <input className="form-control" id="city" name="city"
                   type="text" />
               </div>
               <div>
                 <label htmlFor="state">State </label>
-                <input id="state" name="state"
+                <input className="form-control" id="state" name="state"
                   type="text" />
               </div>
               <div>
                 <label htmlFor="cuisines">Cuisines </label>
-                <input id="cuisines" name="cuisines"
+                <input className="form-control" id="cuisines" name="cuisines"
                   type="text"
                   required />
               </div>
               <br />
-              <input className="submitButton" type="submit" value="Add Places"/> 
+              <input className="btn btn-primary" type="submit" value="Add Places"/> 
             </form>
           <div>
               <a href='places/new'>
