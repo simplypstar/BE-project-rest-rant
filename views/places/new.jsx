@@ -48,4 +48,4 @@ function new_form () {
     )
 }
 
-
+module.exports = new_form

@@ -74,6 +74,10 @@ button {
   margin-top: 20px;
 } 
 
+/* Added animation to the button */
+button:hover, .submitButton:hover {
+  background-color: #789aef
+}
 
 
 /* Added color change when the mouse hovers over button */
