@@ -1,15 +1,86 @@
 h1 {
+  color: blue;
+  
+}
+
+h3 {
     text-align: center;
     color: cornflowerblue;
-  }
+}
   
-  h2 {
-    color: blue;
-  }
+main {
+  background-color: blanchedalmond;
+  width: 800px;
+  margin-top: 100px;
+}
+
+.homepage {
+  text-align: center;
+}
+
+.food-homepg img {
+  width: 200px;
+  height: 250px;
+}
+
+.topRow, .bottomRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 700px;
+  height: 400px;
+  margin-left: 50px;
+  text-align: center;
+}
+
+/* .topRow > * {    
+    border: 1px solid black;
+    text-align: center;
+} */
+
+.topRow > img {
+  align-items: center;
+}
+
+h2 {  
+    color: rgb(51, 131, 108);
+    margin-bottom: 20px;
+}
 
 p {
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
-  color: red;
+  color: rgb(28, 175, 134);
+  /* margin-top: -20px; */
+}
+
+.row img { 
+  height: 300px;
+  width: 350px;
+}
+
+/* Button at the bottom of the home page */
+button {
+  background-color: rgb(149, 193, 236);
+  border: 2px solid black;
+  font-size: 14px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 20px 5px;
+  box-shadow: 5px 0px #818080;
+  margin-left: 50px;
+} 
+
+/* Added animation to the button */
+button:hover {
+  background-color: #789aef
+}
+
+/* Added color change when the mouse hovers over button */
+button:active {
+  background-color: #f86170;
+  box-shadow: 10px 5px 5px red; /*#666;*/
+  transform: translateY(2px);
 }
