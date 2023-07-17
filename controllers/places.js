@@ -1,5 +1,10 @@
 const router = require('express').Router()
 
+// GET request to get a new place
+router.get('/new', (req, res) => {
+  res.render('places/new')
+})
+
 // GET /places
 router.get('/', (req, res) => {
     let places = [{
@@ -17,6 +22,10 @@ router.get('/', (req, res) => {
       }]      
     res.render('places/index', { places } )
 })
+
+
+
+
 
 // POST request to create new a place
 router.post('/', (req, res) => {

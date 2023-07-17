@@ -71,16 +71,29 @@ button {
   border-radius: 20px 5px;
   box-shadow: 5px 0px #818080;
   margin-left: 50px;
+  margin-top: 20px;
 } 
 
 /* Added animation to the button */
-button:hover {
+button:hover, .submitButton:hover {
   background-color: #789aef
 }
 
 /* Added color change when the mouse hovers over button */
-button:active {
+button:active, .submitButton:active {
   background-color: #f86170;
   box-shadow: 10px 5px 5px red; /*#666;*/
   transform: translateY(2px);
+}
+
+.submitButton {
+  background-color: rgb(149, 193, 236);
+  border: 2px solid black;
+  font-size: 14px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 20px 5px;
+  box-shadow: 5px 0px #818080;
+  margin-left: 20px;
+  margin-top: 10px;
 }
