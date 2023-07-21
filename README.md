@@ -39,3 +39,10 @@ BE-REST-Rant is an app where users can review restaurants.
  cuisines       | string         
  pic            | string (a URL) 
 
+
+# References:
+*************
+How can I show special characters like "e" with accent acute over it in HTML page? 
+https://stackoverflow.com/questions/3812949/how-can-i-show-special-characters-like-e-with-accent-acute-over-it-in-html-pag
+
+

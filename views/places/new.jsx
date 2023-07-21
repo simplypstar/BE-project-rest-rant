@@ -37,7 +37,7 @@ function new_form () {
               <input className="btn btn-primary" type="submit" value="Add Places"/> 
             </form>
           <div>
-              <a href='places/new'>
+              <a href='/places'>
                   <button>
                       Back
                   </button>

@@ -4,7 +4,9 @@ function Def (html) {
     return (
         <html>
             <head>
-                <title>Title</title>
+                <meta charSet='utf-8' />
+                <title>Rest-Rant</title>
+                {/* BOOTSTRAP CDN LINK (long) */}
                 <link rel="stylesheet" href="/css/style.css"/>
             </head>
             <body>
