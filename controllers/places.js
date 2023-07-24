@@ -1,28 +1,25 @@
 const router = require('express').Router()
 const places = require('../models/places.js')
 
-// GET request to get a new place
+// GET request to get a  place
 router.get('/', (req, res) => {
   res.render('places/index', { places })
 })
 
-// GET /places
-// router.get('/', (req, res) => {
-//     let places = [{
-//         name: 'H-Thai-ML',
-//         city: 'Seattle',
-//         state: 'WA',
-//         cuisines: 'Thai, Pan-Asian',
-//         pic: "/images/louis-hansel-Restaurant-unsplash.jpeg"
-//         }, {
-//         name: 'Coding Cat Cafe',
-//         city: 'Phoenix',
-//         state: 'AZ',
-//         cuisines: 'Coffee, Bakery',
-//         pic:"/images/colin-maynard-restaurant-unsplash.jpeg"
-//       }]      
-//     res.render('places/index', { places } )
-// })
+// GET request to show a place
+router.get('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN (id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    res.render('places/show',{ place: places[id] })
+  }
+})
+
 
 // Get a new place
 router.get('/new', (req, res) => {
@@ -46,12 +43,6 @@ router.post('/', (req, res) => {
   places.push(req.body)
   res.redirect('/places')
 })
-
-// POST request
-// router.post('/', (req, res) => {
-//   console.log(req.body)
-//   res.send('POST /places')
-// })
 
 
 module.exports = router
