@@ -1,110 +1,89 @@
-h1 {
+h1, h3 {
   color: cornflowerblue;
   text-align: center;
 }
 
-h3 {
-    text-align: center;
-    color: cornflowerblue;
-}
-  
-main {
-  background-color: blanchedalmond;
-  width: 800px;
-  margin-top: 15px;
-}
-
-.homepage {
-  text-align: center;
-  margin-top: 320px;
-}
-
- /* Home page images grid */
-.topRow, .bottomRow {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border: 1px solid black;
-  /* box-sizing: border-box; */
-  /* padding: 25px; */
-  width: 700px;
-  height: 400px;
-  margin-left: 50px;
+h2 { 
+  color: rgb(51, 131, 108);
+  margin-bottom: 15px;
   text-align: center;
 }
 
-/* Homw page images */
-.food-homepg img {
-  width: 200px;
-  height: 250px;
+h3 { 
+  color: blanchedalmond
 }
 
-/* .topRow > * {    
-    border: 1px solid black;
-    text-align: center;
-} */
-
-/* .topRow > h3 { */
-.rows > * {
-  /* align-items: center; */
-  border: 1px solid black;
-  grid-gap: 0px;
-  /* height: 650px;
-  width: 350px; */
-}
-
-h2 {  
-    color: rgb(51, 131, 108);
-    margin-bottom: 20px;
-}
-
+/* Paragraph font formatting */
 p {
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
   color: rgb(28, 175, 134);
-  /* margin-top: -20px; */
 }
 
-.rows img { 
+/* Configure home page size and background color  */
+main {
+  background-color: blanchedalmond;
+  width: 800px;
+  /* height: 800px; */
+}
+
+ /* Home page image grid */
+ .rows {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid black;
+    width: 700px;
+    height: 600px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+/* Home page image size */
+.rows img {
+  width: 200px;
   height: 200px;
-  width: 250px;
+}
+/* Places page image size */
+.row img {
+  width: 200px;
+  height: 200px;
+  margin-left: 20px;
+  
 }
 
-/* Button at the bottom of the home page */
-button {
+.row {
+  text-align: center;
+}
+
+/* Add internal grid borders */
+.rows > * {
+  border: 1px solid black;
+  grid-gap: 1px;
+}
+
+/* Places button at the bottom of the home page */
+button, .submitButton, .btn {
   background-color: rgb(149, 193, 236);
   border: 2px solid black;
   font-size: 14px;
   font-weight: bolder;
   cursor: pointer;
-  border-radius: 20px 5px;
-  box-shadow: 5px 0px #818080;
+  border-radius: 25px 25px;
+  box-shadow: 3px 3px #818080;
   margin-left: 50px;
-  margin-top: 20px;
+  margin-top: 30px;
 } 
 
 /* Added animation to the button */
-button:hover, .submitButton:hover {
+button:hover, .submitButton:hover, .btn:hover {
   background-color: #789aef
 }
 
-
 /* Added color change when the mouse hovers over button */
-button:active, .submitButton:active {
+button:active, .submitButton:active, .btn:active {
   background-color: #f86170;
   box-shadow: 10px 5px 5px red; /*#666;*/
   transform: translateY(2px);
 }
 
-/* Customize the Submit button */
-.submitButton {
-  background-color: rgb(149, 193, 236);
-  border: 2px solid black;
-  font-size: 14px;
-  font-weight: bolder;
-  cursor: pointer;
-  border-radius: 20px 5px;
-  box-shadow: 5px 0px #818080;
-  margin-left: 20px;
-  margin-top: 10px;
-}
