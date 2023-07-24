@@ -7,22 +7,22 @@ router.get('/', (req, res) => {
 })
 
 // GET /places
-router.get('/', (req, res) => {
-    let places = [{
-        name: 'H-Thai-ML',
-        city: 'Seattle',
-        state: 'WA',
-        cuisines: 'Thai, Pan-Asian',
-        pic: "/images/louis-hansel-Restaurant-unsplash.jpeg"
-        }, {
-        name: 'Coding Cat Cafe',
-        city: 'Phoenix',
-        state: 'AZ',
-        cuisines: 'Coffee, Bakery',
-        pic:"/images/colin-maynard-restaurant-unsplash.jpeg"
-      }]      
-    res.render('places/index', { places } )
-})
+// router.get('/', (req, res) => {
+//     let places = [{
+//         name: 'H-Thai-ML',
+//         city: 'Seattle',
+//         state: 'WA',
+//         cuisines: 'Thai, Pan-Asian',
+//         pic: "/images/louis-hansel-Restaurant-unsplash.jpeg"
+//         }, {
+//         name: 'Coding Cat Cafe',
+//         city: 'Phoenix',
+//         state: 'AZ',
+//         cuisines: 'Coffee, Bakery',
+//         pic:"/images/colin-maynard-restaurant-unsplash.jpeg"
+//       }]      
+//     res.render('places/index', { places } )
+// })
 
 // Get a new place
 router.get('/new', (req, res) => {
@@ -31,7 +31,6 @@ router.get('/new', (req, res) => {
 
 // POST request to create new a place
 router.post('/', (req, res) => {
-  console.log(req.body)
   if (!req.body.pic) {
     // Default image if one is not provided
     req.body.pic = '/images/chefs-hat-1588125_1280.png'
