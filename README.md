@@ -43,6 +43,21 @@ BE-REST-Rant is an app where users can review restaurants.
 # References:
 *************
 How can I show special characters like "e" with accent acute over it in HTML page? 
+- used to show an e with a tilde in the word Entree
 https://stackoverflow.com/questions/3812949/how-can-i-show-special-characters-like-e-with-accent-acute-over-it-in-html-pag
+
+How to open a hyperlink in a new tab. The rel attribute sets the relationship between your page and the linked URL. Setting it to noopener noreferrer is to prevent a type of phishing known as tabnabbing.
+- used for the footer that appears on each page
+https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
+
+CSS grid-template-columns Property
+- used to format the grid of food on the home page
+https://www.w3schools.com/cssref/pr_grid-template-columns.php
+
+How to create a sticky footer
+- used to create the footer that displays on each page
+https://css-tricks.com/couple-takes-sticky-footer/
+
+
 
 

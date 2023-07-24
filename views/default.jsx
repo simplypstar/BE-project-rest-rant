@@ -11,6 +11,9 @@ function Def (html) {
             </head>
             <body>
                 {html.children}
+
+                {/* <p></p><p><h3>.</h3></p> */}
+                <footer className="footer">Footer:  <a href="http://www.linkedin.com/in/paulita-s-a11457284" target="_blank" rel="noopener noreferrer">Paulita Starkey's LinkedIn Profile</a></footer>
             </body>
         </html>
     )

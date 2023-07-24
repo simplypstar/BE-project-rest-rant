@@ -9,7 +9,7 @@ h2 {
   text-align: center;
 }
 
-h3 { 
+h4 { 
   color: blanchedalmond
 }
 
@@ -22,9 +22,10 @@ p {
 }
 
 /* Configure home page size and background color  */
-main {
+body {
   background-color: blanchedalmond;
-  width: 800px;
+  width: 100%;
+  height: 100%;
   /* height: 800px; */
 }
 
@@ -33,9 +34,9 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border: 1px solid black;
-    width: 700px;
-    height: 600px;
+    height: auto;
     margin-left: 50px;
+    margin-right: 50px;
     text-align: center;
 }
 
@@ -43,13 +44,14 @@ main {
 .rows img {
   width: 200px;
   height: 200px;
+  margin-top: -10px;
 }
+
 /* Places page image size */
 .row img {
   width: 200px;
   height: 200px;
   margin-left: 20px;
-  
 }
 
 .row {
@@ -85,5 +87,13 @@ button:active, .submitButton:active, .btn:active {
   background-color: #f86170;
   box-shadow: 10px 5px 5px red; /*#666;*/
   transform: translateY(2px);
+}
+
+.footer {
+  height: 50px;
+  margin-top: -10px;
+  margin-left: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
 }
 
