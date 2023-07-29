@@ -20,6 +20,7 @@ function show (data) {
                     </div>
                 </div></center> 
                 <p></p>
+                <a href={`places/${data.id}/edit`} className='btn btn-warning'>Edit</a>
 
                 <button href={`/places/${data.id}/edit`} className="btn btn-warning"> Edit</button>
                  

@@ -12,7 +12,7 @@ router.get('/new', (req, res) => {
 })
 
 // Get to Edit a new place
-router.get('/edit', (req, res) => {
+router.get('/:id/edit', (req, res) => {
   res.render('places/edit')
 })
 
@@ -50,9 +50,23 @@ router.delete('/:id', (req, res) => {
   }
 })
 
+//
+// router.put('/:id', (req, res) => {
+//   let id = Number(req.params.id)
+//   if (isNaN(id)) {
+//       res.render('error404')
+//   }
+//   else if (!places[id]) {
+//       res.render('error404')
+//   }
+//   else {
+//       res.redirect(`/places/${id}`)
+//   }
+// })
+
+
 // get request to Edit a place
-//router.get('/:id/edit', (req, res) => {
-router.put('/:id/edit', (req, res) => {
+router.put('/:id', (req, res) => {
   let id = Number(req.params.id)
   if (isNaN(id)) {
     res.render('error404')
@@ -76,8 +90,6 @@ router.put('/:id/edit', (req, res) => {
     // Save the new data into places[id]
     places[id] = req.body
     res.redirect(`/places/${id}`)
-      // res.redirect(`places/${id}`)
-      // res.render('places/edit', { place: places[id], id })
   }
 })
 
