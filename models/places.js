@@ -1,3 +1,4 @@
+// Inital Places Array
 module.exports = [{
     name: 'H-Thai-ML',
     city: 'Seattle',

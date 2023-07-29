@@ -13,6 +13,12 @@ h4 {
   color: blanchedalmond
 }
 
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: normal;
+}
+
 /* Paragraph font formatting */
 p {
   font-weight: bold;
@@ -26,17 +32,18 @@ body {
   background-color: blanchedalmond;
   width: 100%;
   height: 100%;
-  /* height: 800px; */
 }
 
 nav {
   background-color: cornflowerblue;
   padding: 10px;
+  margin-right: 15px;
+  text-align: center;
 } 
 
 nav ul {
   list-style-type: none;
-  margin: 0;
+  margin:0px;
 }
 
 nav li {
@@ -63,13 +70,45 @@ nav a:hover {
     margin-left: 50px;
     margin-right: 50px;
     text-align: center;
+    
+}
+
+/* Show page image grid */
+ .showRows, .col-sm-6 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid black;
+    height: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    width: 900px;
+}
+
+/* Show page image grid */
+ .showRows, .col-sm-6 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid black;
+    height: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    width: 800px;
 }
 
 /* Home page image size */
 .rows img {
   width: 200px;
   height: 200px;
-  margin-top: -10px;
+  margin-top: 0px;
+}
+
+/* Show page image size */
+.showRows img {
+  width: 200px;
+  height: 200px;
+  margin-top: 25px;
 }
 
 /* Places page image size */
@@ -79,18 +118,19 @@ nav a:hover {
   margin-left: 20px;
 }
 
+/* Places page alignment */
 .row {
   text-align: center;
 }
 
 /* Add internal grid borders */
-.rows > * {
+.rows > * ,.showRows > *, .text-center > * {
   border: 1px solid black;
   grid-gap: 1px;
 }
 
 /* Places button at the bottom of the home page */
-button, .submitButton, .btn {
+button, .submitButton {
   background-color: rgb(149, 193, 236);
   border: 2px solid black;
   font-size: 14px;
@@ -100,7 +140,8 @@ button, .submitButton, .btn {
   box-shadow: 3px 3px #818080;
   margin-left: 50px;
   margin-top: 30px;
-} 
+  width: 75px;
+}
 
 /* Added animation to the button */
 button:hover, .submitButton:hover, .btn:hover {
@@ -116,7 +157,7 @@ button:active, .submitButton:active, .btn:active {
 
 .footer {
   height: 50px;
-  margin-top: -10px;
+  margin-top: 15px;
   margin-left: 50px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
