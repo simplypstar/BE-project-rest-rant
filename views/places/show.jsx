@@ -2,10 +2,35 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
+    let comments = (
+        <h3
+            className="inactive">
+            No more comments yet!
+        </h3>
+    )
+    console.log("The count of Comments is:  " + data.place.comments.length)
+    if (data.place.comments.length) {
+        comments = data.place.comments.map(c => {
+          return (
+            //key={c.id}
+            <div className="border">
+              <h2 className="rant">{c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}</h2>
+              <h4>{c.content}</h4>
+              <h3>
+                <stong>- {c.author}</stong>
+              </h3>
+              <h4>Rating: {c.stars}</h4>
+            </div>
+          )
+        })
+      }
+      else {
+        console.log("Comments is less than 1:  " + data.place.comments.length)
+      }
     return (
         <Def>
             <main>
-                <center><div className='showPlace'>               
+                <center><div className='row showPlace'>               
                     <div className='showRows'>
                         <div className='item1'>
                             <img src={data.place.pic} alt={data.place.name}/>
@@ -35,7 +60,7 @@ function show (data) {
                 
                 <hr></hr>
                 <h1>Comments</h1>
-                <h5>No comments yet!</h5>
+                <h5>{comments}</h5>
             </main>
         </Def>
     )
