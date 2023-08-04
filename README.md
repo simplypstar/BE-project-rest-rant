@@ -39,6 +39,14 @@ BE-REST-Rant is an app where users can review restaurants.
  cuisines       | string         
  pic            | string (a URL) 
 
+# Rant Model Table
+ **Field** | **Type** | **Notes**                                          
+-----------|----------|------------------------------------------------------
+ author    | string   | Name of comment's writer; defaults to Anonymous
+ rant      | Boolean  | Each comment is either a rant (negative) or a rave (positive). Defaults to false.
+ stars     | number   | 1 to 5 star rating in increments of 0.5; required, no default
+ content   | string   | The written content of the comment; defaults to an empty string
+
 
 # References:
 *************
