@@ -9,9 +9,9 @@ h2 {
   text-align: center;
 }
 
-h4 { 
+/* h4 { 
   color: rgb(44, 81, 52)
-}
+} */
 
 h5 {
   font-family: Arial, Helvetica, sans-serif;
@@ -155,6 +155,14 @@ button, .submitButton {
 .btn-danger {
   background-color: red;
   
+}
+
+.alert-danger {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color: #e3a2a8;
+  color: rgb(86, 29, 29);
 }
 
 /* Added animation to the button */

@@ -22,9 +22,9 @@ function show (data) {
                             {/* <p></p> */}
                             {/* <a href={`places/${data.id}/edit`} className='btn btn-warning'>Edit</a> */}
 
-                            <button href={`/places/${data._id}/edit`} className="btn btn-warning"> Edit</button>
+                            <button href={`/places/${data.id}/edit`} className="btn btn-warning"> Edit</button>
                             
-                            <form method="POST" action={`/places/${data._id}?_method=DELETE`}> 
+                            <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
                                 <button type="submit" className="btn btn-danger">
                                     Delete
                                 </button>
