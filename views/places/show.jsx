@@ -14,7 +14,7 @@ function show (data) {
           return (
             //key={c.id}
             <div className="border">
-              <h2 className="rant">{c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}</h2>
+              <h2 className="rant">{c.rant ? 'Rant!' : 'Rave!'}</h2>
               <h4>{c.content}</h4>
               <h3>
                 <stong>- {c.author}</stong>
@@ -41,11 +41,8 @@ function show (data) {
                             <h2>Rating</h2>
                             <h5>Not Rated</h5>
                             <h2>Description</h2>
-                            {/* <h5>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines}</h5> */}
                             <h3>{data.place.showEstablished()}</h3>
                             <h4>Serving {data.place.cuisines}</h4>
-                            {/* <p></p> */}
-                            {/* <a href={`places/${data.id}/edit`} className='btn btn-warning'>Edit</a> */}
 
                             <button href={`/places/${data.id}/edit`} className="btn btn-warning"> Edit</button>
                             
@@ -61,6 +58,27 @@ function show (data) {
                 <hr></hr>
                 <h1>Comments</h1>
                 <h5>{comments}</h5>
+                <form action={`/places/${data.place.id}.comments`} method="POST">
+                    <div className='col-sm-3'>
+                        <label htmlFor='author'>Enter your name: </label>
+                        <input id='author' name='author' className='form-control'/>
+                    </div>
+                    <div className='col-sm-3'>
+                        <label htmlFor='content'>Enter comments: </label>
+                        <input id='content' name='content' className='form-control'/>
+                    </div>
+                    <div className='col-sm-3'>
+                        <label htmlFor='rating'>Rate your visit (.05-5): </label>
+                        <input type='number' id='rating' name='rating' className='form-control'/>
+                    </div>
+                    <div className='col-sm-3'>
+                        <label htmlFor='rantrave'>Rave or Rant visit:  </label>
+                        <input type='checkbox' id='rantrave' name='rantrave' className='form-control' value=''/>
+                    </div>
+                    <input type='submit'value='Submit'/>
+                        
+
+                </form>
             </main>
         </Def>
     )
