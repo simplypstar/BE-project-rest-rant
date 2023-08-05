@@ -16,19 +16,7 @@ BE-REST-Rant is an app where users can review restaurants.
  POST       | /places/:id/rant          | Create a rant \(comment\) about a particular place   
  DELETE     | /places/:id/rant/:rantId  | Delete a rant \(comment\) about a particular place   
  GET        | \*                        | 404 page  \(matches any route not defined above\)    
-
-
-
-# Places Table
- **City**    | **State** | **Cuisines** | **Pics** 
--------------|-----------|--------------|----------
- Raleigh     | NC        | American     |          
- Charlotte   | NC        | Chinese      |          
- Rocky Mount | NC        | Japanese     |          
- Roanoke     | VA        | American     |          
- Roanoke     | VA        | Chinese      |            
-
-
+      
 
 # Places array format
  **Field Name** | **Data Type** 
@@ -38,6 +26,7 @@ BE-REST-Rant is an app where users can review restaurants.
  state          | string         
  cuisines       | string         
  pic            | string (a URL) 
+
 
 # Rant Model Table
  **Field** | **Type** | **Notes**                                          
