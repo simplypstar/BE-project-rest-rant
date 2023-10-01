@@ -53,9 +53,9 @@ router.get('/:id', (req, res) => {
         res.render('error404')
     }
     else {
-       res.render('places/show'), { place: places[id] })
-    }
-    // ********* this is where the initial code ends ***********  
+       res.render('places/show'), { place: places[id], id })
+    
+    }   // ********* this is where the initial code ends ***********  
 
     db.Places.findById(req.params.id)
     .populate('comment')
@@ -84,6 +84,16 @@ router.put('/:id', (req, res) => {
 
 // Delete place by Id
 router.delete('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  } else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    places.splice(id, 1)
+    res.redirect('/places')
+  }
   db.Places.findByIdAndDelete(req.params.id).then(places => {
     res.redirect('/places')
   })

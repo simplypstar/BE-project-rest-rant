@@ -19,10 +19,10 @@ function show(data) {
 
     //href={`/places/${places.id}`}
         console.log('About to display Comments length -showjs')
-        console.log('Comments length -showjs ' + data.places._id)
+        console.log('Comments length -showjs ' + data.place._id)
 
-    if (data.places.comments.length) {
-        comment = data.places.comments.map(c => {
+    if (data.place.comments.length) {
+        comment = data.place.comments.map(c => {
           return (
             //key={c.id}
             <div className="border">
@@ -37,70 +37,39 @@ function show(data) {
         })
     }
 
-
-    //console.log('Places len: ' + data.places.comment.length)
-    //`/places/${data.places.id}.comment`
-    //if (data.places.id.comment.length) {
-    // if (data.places._id.comments.length) {
-    // console.log("Place ID, comment length: " + data.places._id.comment.length)
-    //    // } else {
-    //     comments = data.places._id.comments.map(c => {
-    //         let sumRatings = data.places._id.comments.reduce((total, comment) => {
-    //             return total + comment.stars;
-    //           }, 0);
-        
-    //           let averageRating = Math.round(sumRatings / data.places._id.comments.length);
-    //           let stars = "";
-    //           for (let i = 0; i < averageRating; i++) {
-    //             stars += "⭐️";
-    //           }
-    //           rating = <h3>{stars} stars</h3>;
-    //     return (
-    //         <div className="border">
-    //           <h2 className="rant">{c.rant ? 'Rant!' : 'Rave!'}</h2>
-    //           <h4>{c.content}</h4>
-    //           <h3>
-    //             <stong>- {c.author}</stong>
-    //           </h3>
-    //           <h4>Rating: {c.stars}</h4>
-    //         </div>
-    //       )
-    //     })
     return (
         <Def>
             <main>
-                <center>
-                    <div className='row showPlace'>               
-                        <div className='showRows'>
-                                <div className='item1'>
-                                    <img src={data.places.pic} alt={data.places.name}/>
-                                    <h3>Located in {data.places.city}, {data.places.state}</h3>
-                                </div>
-                                <div className='item2'>
-                                    <h1>{ data.places.name }</h1>                           
-                                    <h2>Rating: </h2> {rating}
-                                  
-                                    <h2>Description</h2>
-                                    <h3>{data.places.showEstablished()}</h3>
-                                    <h4>Serving {data.places.cuisines}</h4>
-
-                                    <button href={`/places/${data.places._id}/edit`} className="btn btn-warning"> Edit
-                                    </button>
+                <div className='row showPlace'>               
+                    <div className='showRows'>
+                            <div className='item1'>
+                                <img src={data.place.pic} alt={data.place.name}/>
+                                <h3>Located in {data.place.city}, {data.place.state}</h3>
+                            </div>
+                            <div className='item2'>
+                                <h1>{ data.place.name }</h1>                           
+                                <h2>Rating: </h2> {rating}
                                 
-                                    <form method="POST" action={`/places/${data.places._id}/comment?_method=DELETE`}> 
-                                        <button type="submit" className="btn btn-danger">
-                                            Delete Comment
-                                        </button>
-                                    </form>
-                                </div>
-                        </div>
+                                <h2>Description</h2>
+                                <h3>{data.place.showEstablished()}</h3>
+                                <h4>Serving {data.place.cuisines}</h4>
+
+                                <button href={`/places/${data.id}/edit`} className="btn btn-warning"> Edit
+                                </button>
+                            
+                                <form method="POST" action={`/places/${data.id}/comment?_method=DELETE`}> 
+                                    <button type="submit" className="btn btn-danger">
+                                        Delete Comment
+                                    </button>
+                                </form>
+                            </div>
                     </div>
-                </center> 
+                </div>
                 
                 <hr></hr>
-                <center><h1>Comments</h1>
+                <h1>Comments</h1>
                 <h5>{comment}</h5>
-                <form action={`/places/${data.places.id}.comment`} method="POST">
+                <form action={`/places/${data.place.id}.comment`} method="POST">
                     <div className="form-group">
                         <label htmlFor='author'>Enter your name: </label>
                         <input id='author' name='author' className="form-control"/>
@@ -118,7 +87,7 @@ function show(data) {
                         <input type='checkbox' id='rant' name='rant' className="form-control"/>
                     </div>
                     <input type='submit'value='Submit Comment'/>
-                </form></center>
+                </form>
             </main>
         </Def>
     )
