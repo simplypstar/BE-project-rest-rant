@@ -30,9 +30,17 @@ p {
 /* Configure home page size and background color  */
 body {
   background-color: blanchedalmond;
+  text-align: center;
   width: 100%;
   height: 100%;
 }
+
+main {
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: white;
+}
+
 
 nav {
   background-color: cornflowerblue;

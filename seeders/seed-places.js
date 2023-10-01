@@ -1,6 +1,6 @@
 const db = require('../models')
 
-db.Place.create([{
+db.Places.create([{
     name: 'H-Thai-ML',
     city: 'Seattle',
     state: 'WA',

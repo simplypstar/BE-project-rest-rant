@@ -31,12 +31,7 @@ function home () {
                                 Photo by <a href="AUTHOR_LINK">Pavithra Salla</a> on <a href="UNSPLASH_LINK">Unsplash</a><p></p>
                             </div>
                         </div>
-                        <div className="navButton">
-                            
-                            <a href="/places">
-                                <button className="btn-primary">Places Page</button>
-                            </a>
-                        </div>
+
                         <p></p><p><h4>.</h4></p>
                     </div>
                 </div>
