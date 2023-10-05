@@ -18,11 +18,11 @@ function show(data) {
     )
 
     //href={`/places/${places.id}`}
-        console.log('About to display Comments length -showjs')
-        console.log('Comments length -showjs ' + data.place._id)
+        //console.log('About to display Comments length -showjs')
+        //console.log('Comments length -showjs ' + data.place._id)
 
     if (data.place.comments.length) {
-        comment = data.place.comments.map(c => {
+        comments = data.place.comments.map(c => {
           return (
             //key={c.id}
             <div className="border">
@@ -38,7 +38,7 @@ function show(data) {
     }
 
     return (
-        <Def>
+        <Def title='Restaurant Stats'>
             <main>
                 <div className='row showPlace'>               
                     <div className='showRows'>

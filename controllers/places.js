@@ -45,17 +45,17 @@ router.get('/new', (req, res) => {
 
 // GET to load the Show page 
 router.get('/:id', (req, res) => {
-    let id = Number(req.params.id)
-    if (isNaN(id)) {
-        res.render('error404')
-    }
-    else if (!places[id]) {
-        res.render('error404')
-    }
-    else {
-       res.render('places/show'), { place: places[id], id })
+    // let id = Number(req.params.id)
+    // if (isNaN(id)) {
+    //     res.render('error404')
+    // }
+    // else if (!places[id]) {
+    //     res.render('error404')
+    // }
+    // else {
+    //    res.render('places/show'), { place: places[id], id })
     
-    }   // ********* this is where the initial code ends ***********  
+    // }   // ********* this is where the initial code ends ***********  
 
     db.Places.findById(req.params.id)
     .populate('comment')
@@ -73,7 +73,7 @@ router.get('/:id', (req, res) => {
 
 //Update
 router.put('/:id', (req, res) => {
-  db.Places.findByIdAndUpdate(req.params.id, req.body).then(()=> {
+  db.Places.findByIdAndUpdate(req.params.id, req.body).then(() => {
     res.redirect(`/places/${req.params.id}`)
   })
   .catch(err=> {
@@ -84,17 +84,7 @@ router.put('/:id', (req, res) => {
 
 // Delete place by Id
 router.delete('/:id', (req, res) => {
-  let id = Number(req.params.id)
-  if (isNaN(id)) {
-    res.render('error404')
-  } else if (!places[id]) {
-    res.render('error404')
-  }
-  else {
-    places.splice(id, 1)
-    res.redirect('/places')
-  }
-  db.Places.findByIdAndDelete(req.params.id).then(places => {
+  db.Places.findByIdAndDelete(req.params.id).then(() => {
     res.redirect('/places')
   })
   .catch(err=> {
@@ -123,23 +113,26 @@ router.post('/:id/comments', (req, res) => {
         db.Comment.create(req.body)
         .then(comments => {
             places.comments.push(comment.id)
-            places.save()
+            place.save()
             .then(() => {
                 res.redirect(`/places/${req.params.id}`)
+            })
+            .catch(err => {
+                res.render('error404')
             })
         })
         .catch(err => {
             res.render('error404')
         })
-      .catch(err => {
-        res.render('error404')
-      })
+    })  
+    .catch(err => {
+      res.render('error404')
     })
 })
 
 
 // Delete comments for a place
-router.delete('/:id/comments/:commentId', (req, res) => {
+router.delete('/:id/comment/:commentId', (req, res) => {
   db.Comment.findByIdAndDelete(req.params.commentId)
   .then(() => {
     res.redirect(`/places/${req.params.id}`)
